@@ -32,4 +32,11 @@ public class User extends BaseEntity {
     )
     private List<Role> roles;
 
+    @Override
+    public String toString() {
+        return "User{" +
+                "username='" + username + '\'' +
+                ", firstName='" + firstName + '\'' +
+                '}';
+    }
 }
