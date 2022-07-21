@@ -106,4 +106,46 @@
             <column name="name" value="ROLE_ADMIN"/>
         </insert>
     </changeSet>
+
+    <changeSet id="1.0.6" author="dima">
+        <insert tableName="users">
+            <column name="id" value="1"/>
+            <column name="username" value="ssoraka"/>
+            <column name="email" value="ssoraka@mail.ru"/>
+            <column name="first_name" value="dima"/>
+            <column name="last_name" value="dimich"/>
+<!--            <column name="password" value="test"/> -->
+            <column name="password" value="$2a$12$es1lHnSXrDbvyBBTnB2W6OpRUockMG4rUQ3Cpz2.aNsjRvPKUxJhi"/>
+            <column name="status" value="ACTIVE"/>
+        </insert>
+
+        <insert tableName="users">
+            <column name="id" value="2"/>
+            <column name="username" value="testUser"/>
+            <column name="email" value="test@mail.ru"/>
+            <column name="first_name" value="test"/>
+            <column name="last_name" value="testov"/>
+            <!--            <column name="password" value="test"/> -->
+            <column name="password" value="$2a$12$es1lHnSXrDbvyBBTnB2W6OpRUockMG4rUQ3Cpz2.aNsjRvPKUxJhi"/>
+            <column name="status" value="ACTIVE"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="1.0.7" author="dima">
+        <insert tableName="user_roles">
+            <column name="user_id" value="1"/>
+            <column name="role_id" value="1"/>
+        </insert>
+
+        <insert tableName="user_roles">
+            <column name="user_id" value="1"/>
+            <column name="role_id" value="2"/>
+        </insert>
+
+        <insert tableName="user_roles">
+            <column name="user_id" value="2"/>
+            <column name="role_id" value="1"/>
+        </insert>
+    </changeSet>
+
 </databaseChangeLog>
